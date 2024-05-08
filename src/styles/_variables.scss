@@ -1,0 +1,116 @@
+// Font-family
+$font-family: 'Figtree', sans-serif;
+$font-figma-hand: 'Figma Hand';
+
+// Font-size
+$body-size: 14px;
+$cta-size: 3.3em;
+$title: 2em;
+$subtitle: 1.5em;
+$p-size: 1em;
+$caption-size: 1em;
+
+$line-height: 1.5;
+
+// Font-weight
+$light: 100;
+$regular: 400;
+$medium: 600;
+$semibold: 700;
+$bold: 800;
+
+// Sizes
+$sm: 767px;
+$md: 960px;
+$lg: 1200px;
+$xl: 1440px;
+
+//Brand Colors
+
+//primaryWhite
+$primaryWhite: #FAFBFF;
+$onPrimaryWhite: #232323;
+$backgroundPrimaryWhite: $primaryWhite;
+$mutedPrimaryWhite: #A1A599;
+$accentPrimaryWhite: #276EF1;
+$infoPrimaryWhite: #6D8AF5;
+$successPrimaryWhite: #0E8345;
+$warningPrimaryWhite: #F6BC2F;
+$errorPrimaryWhite: #DE1135;
+
+//primaryBlack
+$primaryBlack: #232323;
+$onPrimaryBlack: #FAFBFF;
+$backgroundPrimaryBlack: $primaryBlack;
+$mutedPrimaryBlack: #F6F6F6;
+$accentPrimaryBlack: #B7CFFA;
+$infoPrimaryBlack: #E2E8FD;
+$successPrimaryBlack: #C8F9DF;
+$warningPrimaryBlack: #FCEBBF;
+$errorPrimaryBlack: #F47188;
+
+// Custom Light Color Palette
+$custom-light-50: #FAFBFF;
+$custom-light-100: #F0F2F6;
+$custom-light-200: #E1E5EB;
+$custom-light-300: #C2C9D1;
+$custom-light-400: #A3ADB8;
+$custom-light-500: #8491A0;
+$custom-light-600: #657588;
+$custom-light-700: #475A70;
+$custom-light-800: #2A3D58;
+$custom-light-900: #1D2A40;
+
+// Custom Dark Color Palette
+$custom-dark-50: #f2f2f2;
+$custom-dark-100: #dbdbdb;
+$custom-dark-200: #c4c4c4;
+$custom-dark-300: #adadad;
+$custom-dark-400: #969696;
+$custom-dark-500: #7f7f7f;
+$custom-dark-600: #686868;
+$custom-dark-700: #515151;
+$custom-dark-800: #3a3a3a;
+$custom-dark-900: #232323;
+
+// Brand Blue Colors
+$brand-blue-50: #f1f9fe;
+$brand-blue-100: #e3f1fb;
+$brand-blue-200: #c0e3f7;
+$brand-blue-300: #88cef1;
+$brand-blue-400: #49b4e7;
+$brand-blue-500: #2fa6de;
+$brand-blue-600: #147cb5;
+$brand-blue-700: #116493;
+$brand-blue-800: #12557a;
+$brand-blue-900: #154765;
+$brand-blue-950: #0e2d43;
+
+// Brand Green Colors
+$brand-green-50: #f2fbf2;
+$brand-green-100: #e2f6e3;
+$brand-green-200: #c6ecc8;
+$brand-green-300: #9adb9e;
+$brand-green-400: #66c26c;
+$brand-green-500: #42ab4a;
+$brand-green-600: #308937;
+$brand-green-700: #296c2e;
+$brand-green-800: #25562a;
+$brand-green-900: #204724;
+$brand-green-950: #0d2610;
+
+
+// Single Color Values
+$accent-light: #4D96FF;
+$secondary-light: #F9A8D4;
+$info-light: #6D8AF5;
+$warn-light: #FBBF24;
+$error-light: #EF4444;
+$success-light: #22C55E;
+
+$accent-dark: #1E40AF;
+$secondary-dark: #DB2777;
+$info-dark: #E2E8FD;
+$warn-dark: #F59E0B;
+$error-dark: #B91C1C;
+$success-dark: #C8F9DF;

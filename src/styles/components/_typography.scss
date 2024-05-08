@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
+.fasthand-regular {
+    font-family: "Fasthand", cursive;
+    font-weight: 400;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: 'Fasthand', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+    font-weight: 400;
+    font-style: normal;
+} 
+
+html, body {
+    font-size: $body-size;
+    width: 100%;
+}
+*, html, body, h1, h2, h3, h4, h5, h6, p, span {
+    font-family: $font-family;
+    line-height: $line-height;
+    font-weight: $regular;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $medium;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: .25em 0 .25em;
+}
+
+h1 {
+    font-size: $title;
+    font-weight: $bold;
+}
+h2 {
+    font-size: $title;
+    font-size: 2em;
+    font-weight: $bold;
+}
+h3 {
+    font-size: 1.5em;
+    font-weight: $medium;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+p, li {
+    font-size: $p-size;
+}
+span {
+    font-size: $caption-size;
+}
+
+.font-regular {
+    font-weight: $regular;
+}
+.font-bold {
+    font-weight: $semibold;
+}
+.font-extrabold {
+    font-weight: $bold;
+}

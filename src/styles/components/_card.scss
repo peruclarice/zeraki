@@ -1,0 +1,178 @@
+.card {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    border-color: $brand-green-800;
+
+    &.pricing-card {
+        .mat-card-header {
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            * {
+                position: relative;
+                z-index: 1;
+            }
+            &::before {
+                content: "";
+                width: 200%;
+                height: 180px;
+                transform: skew(0deg, 5deg);
+                background-color: $infoPrimaryWhite;
+                position: absolute;
+                top: -5%;
+                left: 50%;
+                right: 0;
+                margin-left: -65%;
+            }
+            .mat-card-subtitle {
+                font-size: 2em;
+            }
+        }
+
+        .mat-card-content {
+            padding: 2em 0;
+        }
+    }
+
+    ul {
+        li {
+            padding: 1em;
+        }
+    }
+
+    .card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 1em;
+        padding: 24px;
+        background-color: #FAFBFF;
+    }
+
+    .card-title {
+        font-size: 1.5em;
+        font-weight: $semibold;
+        margin-bottom: .45em;
+    }
+    .card-subtitle {
+        font-size: 1em;
+        opacity: .7;
+    }
+
+    .card-body {
+        padding: 24px;
+    }
+
+    .card-footer {
+        // border-top: 0.3px solid $mutedPrimaryWhite;
+        height: 64px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.badge {
+    padding: .8rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: .25em;
+    font-weight: 500;
+
+    &-sm {
+        border-radius: 4px;
+        padding: .5rem .8rem;
+        font-size: .8rem; 
+        display: inline-flex;
+        align-items: center;
+        gap: .25em;
+    }
+
+    &-lg {
+        border-radius: 4px;
+        padding: 1rem;
+        font-size: 1.25rem; 
+        display: inline-flex;
+        align-items: center;
+        gap: .25em;
+    }
+
+    &-rounded {
+        padding: .5rem;
+        font-size: 1rem; 
+        border-radius: 100%;
+        display: inline-flex;
+        align-items: center;
+        gap: .25em;
+    }
+
+    &.badge-primary {
+        background-color: $brand-green-100;
+        color: $brand-green-600;
+    }
+
+    &.badge-secondary {
+        background-color: $brand-blue-100;
+        color: $brand-blue-600;
+    }
+}
+
+.header-decorater {
+    background: linear-gradient(90deg, $brand-green-500 0%, transparent 100%) !important;
+    border: none;
+
+    .pattern {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .decorater-ellipse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        width: 300px;
+        width: 100%;
+        height: 100%;
+
+        .ellipse {
+          background-color: $accentPrimaryWhite;
+          mix-blend-mode: soft-light;
+          opacity: .8;
+          z-index: 5;
+          position: absolute;
+          border-radius: 50%;
+          &.ellipse-sm {
+          width: 200px;
+          height: 200px;
+              top: -50px;
+              left: -50px;
+          }
+          &.ellipse-md {
+              width: 400px;
+              height: 400px;
+              top: -180px;
+              left: -180px;
+          }
+          &.ellipse-lg {
+              width: 600px;
+              height: 600px;
+              top: -300px;
+              left: -300px;
+          }
+        }
+      }
+}

@@ -1,0 +1,371 @@
+/* ----------------------------------------------------------------------------------------------------- */
+/*  @ Import/write your custom styles here.
+/*  @ Styles from this file will override 'vendors.scss' and Fuse's base styles.
+/* ----------------------------------------------------------------------------------------------------- */
+@import './base-dir';
+
+layout router-outlet + * {
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+        color: $infoPrimaryWhite;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+hr {
+    width: 100%;
+    min-width: none;
+    max-width: none;
+    height: 1px;
+    background-color: rgb(0,0,0,0.02);
+    margin: 1em 0;
+}
+
+.hero-section {
+    padding-top: 80px;
+    background: linear-gradient(45deg, #2FA6DE 0%, #195A78 100%);
+
+    .cta-img-1, .cta-img-2 {
+        position: absolute;
+        z-index: 10;
+        bottom: 10px;
+        display: none;
+    }
+    .cta-img-1 {
+        left: 0;
+        img {
+            max-height: 450px;
+        }
+    }
+    .cta-img-2 {
+        right: 0;
+        img {
+            max-height: 550px;
+        }
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    p {
+        font-size: 1em;
+        margin: 1.5em 0;
+        opacity: .8;
+        font-weight: 300;
+    }
+}
+.ellipsis {
+    width: 300px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(100px);
+    background-color: #21CEB9;
+    mix-blend-mode: color-burn;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 3;
+
+    &.first {
+        top: -130px;
+        left: -150px;
+    }
+    &.second {
+        bottom: -130px;
+        right: -150px;
+    }
+}
+.ellipsis-base {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    z-index: 14;
+    width: 100%;
+    object-fit: contain;
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    &.dark-overlay {
+        background: rgb(0,0,0,0.02);
+        background: rgb(15, 23, 42, .4);
+    }
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+
+    mat-icon {
+        &:hover {
+            color: inherit;
+        }
+    }
+}
+
+.social-media-icon {
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .35s ease-out;
+    background-color: $backgroundPrimaryBlack;
+    color: $onPrimaryBlack;
+    mat-icon {
+        color: $onPrimaryBlack;
+    }
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+    // svg, path {
+    //     fill: $onPrimaryBlack;
+    // }
+    .download path {
+        fill: $onPrimaryBlack;
+    }
+
+    &:hover {
+        background-color: $infoPrimaryWhite;
+        color: $onPrimaryWhite;
+        // mat-icon {
+        //     color: $onPrimaryWhite;
+        // }
+        // svg, path {
+        //     fill: $onPrimaryWhite;
+        // }
+        // .download path {
+        //     fill: $onPrimaryWhite;
+        // }
+    }
+}
+
+.fuse-vertical-navigation-item-wrapper {
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .fuse-vertical-navigation-item-title-wrapper {
+        // .fuse-vertical-navigation-item-title {
+        //     font-size: .8em !important;
+        //     margin-bottom: .45em;
+        // }
+        .fuse-vertical-navigation-item-subtitle {
+            font-weight: $regular;
+        }
+    }
+
+}
+.fuse-vertical-navigation-item-wrapper {
+
+    a {
+
+        &.fuse-vertical-navigation-item-active {
+            background-color: $backgroundPrimaryWhite !important;
+            color: $primaryBlack !important;
+        }
+    }
+}
+
+.mat-mdc-table {
+    td, th {
+        min-width: 10rem;
+    }
+}
+
+.header-decorater {
+    position: relative;
+    background: linear-gradient(180deg, #C9D4FD 0%, transparent 100%);
+    border-radius: 8px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .decorater-ellipse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        width: 300px;
+        height: 100%;
+
+        .ellipse {
+            background-color: $accentPrimaryWhite;
+            mix-blend-mode: soft-light;
+            opacity: .8;
+            z-index: 5;
+            position: absolute;
+            border-radius: 50%;
+            &.ellipse-sm {
+            width: 200px;
+            height: 200px;
+                top: -50px;
+                left: -50px;
+            }
+            &.ellipse-md {
+                width: 400px;
+                height: 400px;
+                top: -180px;
+                left: -180px;
+            }
+            &.ellipse-lg {
+                width: 600px;
+                height: 600px;
+                top: -300px;
+                left: -300px;
+            }
+        }
+    }
+}
+
+.progress {
+    .progress-circle {
+        display: block;
+        border-radius: 100%;
+        position: relative;
+        width: 12px;
+        height: 12px;
+        margin-top: 0.35em;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -1.5px;
+            width: 1px;
+            height: 100px;
+            background-color: inherit;
+            border-radius: 32px;
+            border: 1px dashed;
+            border-color: inherit;
+        }
+
+        &:last-child {
+            &::before {
+                content: "";
+                opacity: .4;
+                width: 0;
+            }
+        }
+    }
+}
+
+.progress-bar {
+    font-size: .75em;
+    padding: 0 1em;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    border-radius: 32px;
+    overflow: hidden;
+    height: 16px;
+    max-width: 500px;
+    width: 100%;
+    .progress-active {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 75%;
+    }
+}
+
+.faq-grid {
+    grid-template-columns: 1fr;
+    gap: 2em;
+}
+
+.bg-pattern {
+    background-image: url(/assets/images/pattern.png);
+    background-size: contain;
+    // background-attachment: fixed;
+}
+
+.teacher-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+    border: 1.5px solid $brand-green-800;
+    overflow: hidden;
+
+    img {
+        mix-blend-mode: luminosity;
+        object-fit: cover;
+    }
+}
+
+.overlay-layer-blur {
+    background-color: rgb(15, 23, 42, .14);
+    backdrop-filter: blur(2px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.testimonial {
+    .carousel-caption {
+        position: static;
+    }
+    .carousel-indicators {
+        margin-bottom: -4em;
+    }
+    .carousel-control-prev {
+        left: -120px;
+    }
+    .carousel-control-next {
+        right: -120px;
+    }
+}
+
+.fit-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+.backdrop-blur {
+  background-color: rgb(0,0,0,.124);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

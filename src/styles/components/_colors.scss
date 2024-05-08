@@ -1,0 +1,117 @@
+
+
+// Define color maps for structured data access
+$colors: (
+  "custom-light": (
+    50: #FAFBFF,
+    100: #F0F2F6,
+    200: #E1E5EB,
+    300: #C2C9D1,
+    400: #A3ADB8,
+    500: #8491A0,
+    600: #657588,
+    700: #475A70,
+    800: #2A3D58,
+    900: #1D2A40,
+  ),
+  "custom-dark": (
+    50: #f2f2f2,
+    100: #dbdbdb,
+    200: #c4c4c4,
+    300: #adadad,
+    400: #969696,
+    500: #7f7f7f,
+    600: #686868,
+    700: #515151,
+    800: #3a3a3a,
+    900: #232323,
+  ),
+  "brand-blue": (
+    50: #f1f9fe,
+    100: #e3f1fb,
+    200: #c0e3f7,
+    300: #88cef1,
+    400: #49b4e7,
+    500: #2fa6de,
+    600: #147cb5,
+    700: #116493,
+    800: #12557a,
+    900: #154765,
+    950: #0e2d43,
+  ),
+  "brand-green": (
+    50: #f2fbf2,
+    100: #e2f6e3,
+    200: #c6ecc8,
+    300: #9adb9e,
+    400: #66c26c,
+    500: #42ab4a,
+    600: #308937,
+    700: #296c2e,
+    800: #25562a,
+    900: #204724,
+    950: #0d2610,
+  ),
+  "default": (
+    "primary": $primaryWhite,
+    "accent": $accentPrimaryWhite,
+    "warn": $warningPrimaryWhite,
+    "muted": $mutedPrimaryWhite,
+    "info": $infoPrimaryWhite,
+    "success": $successPrimaryWhite,
+    "error": $errorPrimaryWhite,
+    "on-primary": $onPrimaryWhite,
+    "on-accent": $custom-light-50,
+    "on-warn": $custom-light-50,
+  ),
+  "dark": (
+    "primary": $primaryBlack,
+    "accent": $accentPrimaryBlack,
+    "warn": $warningPrimaryBlack,
+    "muted": $mutedPrimaryBlack,
+    "info": $infoPrimaryBlack,
+    "success": $successPrimaryBlack,
+    "error": $errorPrimaryBlack,
+    "on-primary": $custom-light-50,
+    "on-accent": $accentPrimaryWhite,
+    "on-warn": $warningPrimaryWhite,
+  ),
+//   "primary": $primaryBlack,
+  "accent-light": $accent-light,
+  "secondary-light": $secondary-light,
+  "info-light": $info-light,
+  "warn-light": $warn-light,
+  "error-light": $error-light,
+  "success-light": $success-light,
+  "accent-dark": $accent-dark,
+  "secondary-dark": $secondary-dark,
+  "info-dark": $info-dark,
+  "warn-dark": $warn-dark,
+  "error-dark": $error-dark,
+  "success-dark": $success-dark,
+);
+
+// Loop through each palette
+@each $palette, $colors in $colors {
+  @if type-of($colors) == 'map' {
+    @each $color-name, $color-value in $colors {
+      // Generate text color classes for palettes
+      .text-#{$palette}-#{$color-name} {
+        color: $color-value;
+      }
+      // Generate background color classes for palettes
+      .bg-#{$palette}-#{$color-name} {
+        background-color: $color-value;
+      }
+    }
+  } @else {
+    // Generate text color classes for single colors
+    .text-#{$palette} {
+      color: $colors;
+    }
+    // Generate background color classes for single colors
+    .bg-#{$palette} {
+      background-color: $colors;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.btn {
+    min-width: 140px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // margin: 0 .25em;
+    font-size: .9em;
+    font-weight: $regular;
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: all .5s ease-out;
+    text-decoration: none;
+    border-color: transparent;
+    
+    &:hover {
+        cursor: pointer;
+    }
+
+    mat-icon {
+        color: inherit !important;
+    }
+    span {
+        font-size: 1em;
+        font-weight: $regular;
+    }
+
+    &.btn-primary {
+        background-color: $brand-green-500;
+        color: $onPrimaryBlack;
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    &.btn-secondary {
+        background-color: $brand-blue-500;
+        color: $onPrimaryWhite;
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    &.btn-accent {
+        background-color: $infoPrimaryWhite;
+        color: $onPrimaryBlack;
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    &.btn-transparent {
+        background-color: transparent;
+        color: inherit;
+        box-shadow: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &.btn-outlined {
+        background-color: transparent;
+        color: $onPrimaryBlack;
+        box-shadow: none;
+        border: 1px solid $onPrimaryWhite;
+    }
+
+}
+
+
+// .dark {
+//     .btn-primary {
+//         background-color: red !important;
+//         color: $onPrimaryBlack;
+//         &:hover {
+//             box-shadow: none;
+//         }
+//     }
+// }
