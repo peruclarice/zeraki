@@ -23,7 +23,7 @@ Navigate through the application using the following routes:
 
 ## Screens
 
-### Mobile Application
+### Web Application
 #### Landing Page
 ![Landing Page Screenshot](/src/assets/images/screenshots/landing-page.jpg)
 
