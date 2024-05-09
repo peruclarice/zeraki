@@ -21,6 +21,26 @@ Navigate through the application using the following routes:
 - **Teacher Dashboard**: `/teacher/overview`
 - **Student Dashboard**: `/student/overview`
 
+## Screens
+
+### Mobile Application
+#### Landing Page
+![Landing Page Screenshot](/src/assets/images/screenshots/landing-page.jpg)
+
+#### Admin Dashboard
+![Admin Overview Screenshot](/src/assets/images/screenshots/Admin-dashboard/home.jpg)
+![Analytics Screenshot](/src/assets/images/screenshots/Admin-dashboard/analytics.jpg)
+![My Students Screenshot](/src/assets/images/screenshots/Admin-dashboard/students.jpg)
+
+#### Teacher Dashboard
+![Teacher Overview Screenshot](/src/assets/images/screenshots/Teacher-dashboard/home.jpg)
+![Assessment Screenshot](/src/assets/images/screenshots/Teacher-dashboard/assessment.jpg)
+
+#### Student Dashboard
+![Student Assignments Screenshot](/src/assets/images/screenshots/Student-dashboard/assignments.jpg)
+![Student Assessment Screenshot](/src/assets/images/screenshots/Student-dashboard/assessment.jpg)
+![Student Overview Screenshot](/src/assets/images/screenshots/Student-dashboard/home.jpg)
+
 ## Development Server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
