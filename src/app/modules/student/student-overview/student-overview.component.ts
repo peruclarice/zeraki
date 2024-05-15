@@ -5,6 +5,7 @@ import { faArrowRight, faCalendar, faClock, faDotCircle, faEllipsisV, faEnvelope
 import {Subscription} from "rxjs";
 import {Student} from "../../../services/students/IStudent";
 import {StudentsService} from "../../../services/students/students.service";
+import { IUser, AuthService } from '../../../services/auth/auth.service';
 
 @Component({
   selector: 'app-student-overview',
@@ -25,11 +26,13 @@ export class StudentOverviewComponent implements OnInit, OnDestroy{
 
   students: Student[] = []; // Plain array
   private subscriptions: Subscription = new Subscription();
+  user: IUser | null = null;
 
-  constructor(private studentsService: StudentsService) {
+  constructor(private studentsService: StudentsService, private authService: AuthService) {
   }
 
   ngOnInit(): void {
+    this.user = this.authService.getUser();
     this.loadData();
   }
 

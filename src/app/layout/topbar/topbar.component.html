@@ -1,11 +1,16 @@
 <header class="topbar bg-white">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid justify-content-between">
-<!--        <a class="navbar-brand" href="#">Zeraki School</a>-->
-          <button class="btn btn-primary d-block d-lg-none">Open Menu</button>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+       <a class="navbar-brand d-lg-none">
+        <img src="assets/images/logo/logo.png" alt="Zeraki Logo">
+      </a>
+          <!-- <button (click)="toggleSidebar()" class="btn btn-primary d-block d-lg-none">Open Menu</button> -->
+          <div class="d-flex">
+            <button (click)="toggleSidebar()" class="btn btn-primary d-block d-lg-none">Menu</button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
         <div class="collapse navbar-collapse justify-content-between" id="navbarScroll">
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -20,15 +25,15 @@
 <!--            </li>-->
             <li class="nav-item dropdown">
               <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle d-flex flex-wrap align-items-center gap-2">
-                <img src="assets/images/avatars/brian-hughes.jpg" alt="user" class="w-48 h-48 object-fit-cover" style="border-radius: 50%;">
+                <img [src]="user?.avatar" [alt]="user?.name" class="w-48 h-48 object-fit-cover" style="border-radius: 50%;">
                 <div>
-                  <h4>Brian Hughes</h4>
-                  <p>brian.hughes&#64;school.com</p>
+                  <h4>{{ user?.name }}</h4>
+                  <p>{{ user?.email }}</p>
                 </div>
               </a>
                 <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Home</a></li>
-                <li><a class="dropdown-item" href="#">Logout</a></li>
+                <li><a class="dropdown-item" href="/">Home</a></li>
+                <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
                 </ul>
             </li>
 <!--            <li class="nav-item">-->

@@ -369,3 +369,9 @@ section {
   left: 0;
   right: 0;
 }
+
+.nav-link {
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -1,4 +1,4 @@
-<div class="sidebar admin-sidebar">
+<div class="sidebar admin-sidebar" [class.open]="isOpen">
   <a href="/home" class="d-block p-4">
     <img src="assets/images/logo/logo.png" class="w-100 object-fit-contain" alt="Logo">
   </a>
@@ -47,6 +47,13 @@
 <!--          <span>My Profile</span>-->
 <!--        </a>-->
 <!--      </li>-->
+
+        <li class="menu-item">
+          <a (click)="logout()" routerLinkActive="active" class="nav-link">
+            <fa-icon [icon]="faArrowRightFromBracket"></fa-icon>
+            <span>Logout</span>
+          </a>
+        </li>
 
     </ul>
   </div>

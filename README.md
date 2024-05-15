@@ -12,6 +12,25 @@ Zeraki is an innovative learning management platform designed to enhance educati
 - **Teacher Dashboard**: Handle classes, assignments, and monitor student progress.
 - **Student Dashboard**: Access and submit assignments, review course materials, and track educational achievements.
 
+## User Credentials
+
+The following are the credentials for:
+
+### Admin
+
+- **Admin Email**: `admin@example.com`
+- **Admin Password**: `admin123`
+
+### Teacher
+
+- **Teacher Email**: `teacher@example.com`
+- **Teacher Password**: `teacher123`
+
+### Student
+
+- **Student Email**: `student@example.com`
+- **Student Password**: `student123`
+
 ## Application Routes
 
 Navigate through the application using the following routes:
