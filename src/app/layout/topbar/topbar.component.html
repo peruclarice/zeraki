@@ -1,11 +1,11 @@
 <header class="topbar bg-white">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid justify-content-between">
-       <a class="navbar-brand d-lg-none">
-        <img src="assets/images/logo/logo.png" alt="Zeraki Logo">
-      </a>
+        <div class="container-fluid justify-content-center justify-content-sm-between">
+          <a class="navbar-brand d-lg-none">
+            <img src="assets/images/logo/logo.png" alt="Zeraki Logo">
+          </a>
           <!-- <button (click)="toggleSidebar()" class="btn btn-primary d-block d-lg-none">Open Menu</button> -->
-          <div class="d-flex">
+          <div class="d-flex topbar-menus justify-content-between justify-content-sm-between">
             <button (click)="toggleSidebar()" class="btn btn-primary d-block d-lg-none">Menu</button>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -17,12 +17,6 @@
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
             <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-<!--            <li class="nav-item">-->
-<!--                <a class="nav-link active" aria-current="page" href="#">Home</a>-->
-<!--            </li>-->
-<!--            <li class="nav-item">-->
-<!--                <a class="nav-link" href="#">Link</a>-->
-<!--            </li>-->
             <li class="nav-item dropdown">
               <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle d-flex flex-wrap align-items-center gap-2">
                 <img [src]="user?.avatar" [alt]="user?.name" class="w-48 h-48 object-fit-cover" style="border-radius: 50%;">
@@ -36,9 +30,6 @@
                 <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
                 </ul>
             </li>
-<!--            <li class="nav-item">-->
-<!--                <a class="nav-link disabled" aria-disabled="true">Link</a>-->
-<!--            </li>-->
             </ul>
 
         </div>

@@ -35,4 +35,7 @@ export class AdminSidebarComponent {
   logout(){
     this.authService.logout();
   }
+  toggleSidebar(): void {
+    this.sidebarService.toggle();
+  }
 }

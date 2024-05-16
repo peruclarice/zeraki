@@ -17,7 +17,7 @@ export class TopbarComponent implements OnInit {
 
   ngOnInit(): void {
       this.user = this.authService.getUser();
-      console.log("User data:", this.user);
+      // console.log("User data:", this.user);
   }
 
   logout(){

@@ -1,0 +1,12 @@
+.graduants {
+    width: 100%;
+    height: 30%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 567px) {
+    .graduants {
+        height: auto;
+        object-fit: contain;
+    }
+}

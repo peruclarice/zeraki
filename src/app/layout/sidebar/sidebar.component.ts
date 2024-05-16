@@ -36,4 +36,8 @@ export class SidebarComponent {
   logout(){
     this.authService.logout();
   }
+
+  toggleSidebar(): void {
+    this.sidebarService.toggle();
+  }
 }
